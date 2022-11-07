@@ -39,7 +39,6 @@ import {
   Breakpoints,
   BreakpointsKeys,
   Layout,
-  LayoutItem,
   RecordBreakpoint,
   ResponsiveLayout
 } from '../../types/helpers'
@@ -48,8 +47,8 @@ import {
   PropType,
   computed,
   defineEmits,
-  defineProps,
   defineExpose,
+  defineProps,
   nextTick,
   onBeforeMount,
   onBeforeUnmount,
@@ -492,7 +491,6 @@ const createObserver = () => {
   })
 }
 
-
 // lifecycles
 onCreated()
 onBeforeUnmount(() => {
@@ -535,10 +533,9 @@ onMounted(() => {
   })
 })
 
-
 defineExpose({
-  onWindowResize,
-  dragEvent
+  dragEvent,
+  onWindowResize
 })
 </script>
 

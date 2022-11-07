@@ -26,22 +26,11 @@ export const keysValidator = (requiredKeys: string[], propsKeys: string[]): bool
 }
 
 export const layoutValidator = (layout: Layout) => {
-  const { validOptionalLayout, validRequiredLayout } = layoutValidatorPayload
-  const validLayout = { ...validRequiredLayout, ...validOptionalLayout }
+  const { validRequiredLayout } = layoutValidatorPayload
   const requiredKeys = Object.keys(validRequiredLayout)
   const requiredKeysValid = layout.map(l => keysValidator(requiredKeys, Object.keys(l)))
 
   if (requiredKeysValid.includes(false)) return false
-
-  const validTypes = layout.map(l => {
-    const layoutItemKeys = (Object.keys(l) as (keyof typeof l)[])
-
-    return layoutItemKeys
-      .map(k => validLayout[k] ? typeof l[k] === typeof validLayout[k] : true)
-      .includes(false)
-  })
-
-  return !validTypes.includes(false)
 }
 
 export const marginValidator = (value: [number, number]): boolean => {

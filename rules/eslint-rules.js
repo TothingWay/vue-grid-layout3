@@ -1,6 +1,7 @@
 module.exports = {
   plugins: ['sort-exports'],
   rules: {
+    '@typescript-eslint/ban-ts-comment': 'off',
     // disallow spaces between curly braces
     'array-bracket-spacing': ['error', 'never'],
     // allows omitting parens when there is only one argument
