@@ -10,7 +10,8 @@ export default defineConfig({
         outDir: 'dist',
         lib: {
             entry: resolve(__dirname, '../packages/index.ts'),
-            name: 'vue-grid-layout3'
+            name: 'vue-grid-layout3',
+            formats: ['es']
         },
         rollupOptions: {
             // 确保外部化处理那些你不想打包进库的依赖
