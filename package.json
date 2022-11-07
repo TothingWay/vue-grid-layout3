@@ -1,6 +1,6 @@
 {
   "name": "vue-grid-layout3",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "private": false,
   "license": "MIT",
   "main": "dist/vue-grid-layout3.umd.js",
@@ -16,6 +16,7 @@
     "vue-next",
     "grid-layout",
     "vue-grid-layout",
+    "vue-grid-layout3",
     "vue3-grid-layout"
   ],
   "description": "vue3 版本的 vue3-grid-layout，tsx适配版本",

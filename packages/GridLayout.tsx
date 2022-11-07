@@ -1,4 +1,4 @@
-import { defineComponent, inject } from 'vue'
+import { defineComponent } from 'vue'
 
 import {
   bottom,
@@ -33,7 +33,7 @@ import { nextTick, onBeforeUnmount, onMounted, provide, reactive, ref, toRef, wa
 import { propsGridLayout as props } from './props';
 import './GridLayout.css'
 import mitt from 'mitt'
-import { Emitter, EventType } from 'mitt';
+import { EventType } from 'mitt';
 
 export default defineComponent({
   name: 'GridLayout',
@@ -48,11 +48,7 @@ export default defineComponent({
   ],
   props,
   setup(props, { emit }) {
-
-    let eventBus = inject(eventBusKey) as Emitter<Record<EventType, unknown>>;
-    if (!eventBus) {
-      eventBus = mitt<Record<EventType, unknown>>()
-    }
+    const eventBus = mitt<Record<EventType, unknown>>()
     const layoutContainer = ref(null)
     provide(eventBusKey, eventBus)
     provide(parentRootKey, layoutContainer)
