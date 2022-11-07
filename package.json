@@ -1,5 +1,5 @@
 {
-  "name": "vue-grid-layout",
+  "name": "vue-grid-layout3",
   "version": "1.0.0",
   "scripts": {
     "bootstrap": "lerna bootstrap",

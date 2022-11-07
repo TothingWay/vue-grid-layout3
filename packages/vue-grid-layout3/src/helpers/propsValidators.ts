@@ -30,7 +30,7 @@ export const layoutValidator = (layout: Layout) => {
   const requiredKeys = Object.keys(validRequiredLayout)
   const requiredKeysValid = layout.map(l => keysValidator(requiredKeys, Object.keys(l)))
 
-  if (requiredKeysValid.includes(false)) return false
+  return !requiredKeysValid.includes(false)
 }
 
 export const marginValidator = (value: [number, number]): boolean => {
