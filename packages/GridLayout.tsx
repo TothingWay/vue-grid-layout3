@@ -91,8 +91,7 @@ export default defineComponent({
 
     const containerHeight = () => {
       if (!props.autoSize) return
-      const buffer = 15 // 最下面的元素无法操作，留一点缓冲
-      return bottom(props.layout) * (props.rowHeight + props.margin[1]) + props.margin[1] + buffer + 'px'
+      return bottom(props.layout) * (props.rowHeight + props.margin[1]) + props.margin[1] + 'px'
     }
 
     const updateHeight = () => {
@@ -352,7 +351,8 @@ export default defineComponent({
       isDragging,
       placeholder,
       layoutContainer,
-      dragEvent
+      dragEvent,
+      initResponsiveFeatures
     }
   },
   render() {
