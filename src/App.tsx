@@ -29,7 +29,7 @@ export default defineComponent({
                 is-mirrored={false}
                 vertical-compact={true}
                 margin={[10, 10]}
-                use-css-transforms={true}
+                use-css-transforms={false}
             >
                 {this.layout.map(item => (
                     <GridItem

@@ -32,7 +32,7 @@ export default defineComponent({
     const margin = inject(marginKey, ref([10, 10]));
     const maxRows = inject(maxRowsKey, ref(Infinity));
     const cols = inject(colNumKey, ref(12));
-    const useCssTransforms = inject(useCssTransformsKey, ref(true));
+    const useCssTransforms = inject(useCssTransformsKey, ref(true));    
 
     const dragEventSet = ref(false);
     const resizeEventSet = ref(false);
@@ -190,7 +190,7 @@ export default defineComponent({
       }
       let _style = null;
       // CSS Transforms support (default)
-      if (useCssTransforms) {
+      if (useCssTransforms.value) {
         // Add rtl support
         if (renderRtl.value) {
           _style = setTransformRtl(pos.top, pos.right as number, pos.width, pos.height);
