@@ -352,7 +352,7 @@ export default defineComponent({
       placeholder,
       layoutContainer,
       dragEvent,
-      initResponsiveFeatures
+      resizeEvent
     }
   },
   render() {
