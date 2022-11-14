@@ -1,9 +1,7 @@
-*.js
-*.ts
-*.json
-*.png
-*.eot
-*.ttf
-*.woff
-dist
-node_modules
+# .gitignore syntax (uses node-ignore behind the scenes)
+{
+  rules: {},
+  ignoreFiles: [
+    '**/*.js'
+  ]
+}
